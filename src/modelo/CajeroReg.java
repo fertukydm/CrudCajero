@@ -16,7 +16,7 @@ public class CajeroReg {
     String UUID_Cajero;
     String Nombre_Cajero;
     int Edad_Cajero;
-    Number Peso_Cajero;
+    Double Peso_Cajero;
     String Correo_Cajero;
     
       public String getUUID_Cajero() {
@@ -35,7 +35,7 @@ public class CajeroReg {
         this.Nombre_Cajero = Nombre_Cajero;
     }
 
-    public double getEdad_Cajero() {
+    public int getEdad_Cajero() {
         return Edad_Cajero;
     }
 
@@ -43,11 +43,11 @@ public class CajeroReg {
         this.Edad_Cajero = Edad_Cajero;
     }
 
-    public Number getPeso_Cajero() {
+    public Double getPeso_Cajero() {
         return Peso_Cajero;
     }
 
-    public void setPeso_Cajero(Number Peso_Cajero) {
+    public void setPeso_Cajero(Double Peso_Cajero) {
         this.Peso_Cajero = Peso_Cajero;
     }
     public String getCorreo_Cajero(){
@@ -64,16 +64,16 @@ public class CajeroReg {
         Connection conexion = ClaseConexion.getConexion();
         try {
             //Creamos el PreparedStatement que ejecutará la Query
-            PreparedStatement addProducto = conexion.prepareStatement("INSERT INTO tbCajero (UUID_Cajero, Nombre_Cajero, Edad_Cajero, Peso_Cajero, Correo_Cajero) VALUES (?, ?, ?, ?)");
+            PreparedStatement addCajero = conexion.prepareStatement("INSERT INTO tbCajero (UUID_Cajero, Nombre_Cajero, Edad_Cajero, Peso_Cajero, Correo_Cajero) VALUES (?, ?, ?, ?, ?)");
             //Establecer valores de la consulta SQL
-            addProducto.setString(1, UUID.randomUUID().toString());
-            addProducto.setString(2, getNombre_Cajero());
-            addProducto.setint(3, getEdad_Cajero());
-            addProducto.setNumber(4, getPeso_Cajero());
-            addProducto.setString(5, getCorreo_Cajero());
+            addCajero.setString(1, UUID.randomUUID().toString());
+            addCajero.setString(2, getNombre_Cajero());
+            addCajero.setInt(3, getEdad_Cajero());
+            addCajero.setDouble(4, getPeso_Cajero());
+            addCajero.setString(5, getCorreo_Cajero());
  
             //Ejecutar la consulta
-            addProducto.executeUpdate();
+            addCajero.executeUpdate();
  
         } catch (SQLException ex) {
             System.out.println("este es el error en el modelo:metodo guardar " + ex);

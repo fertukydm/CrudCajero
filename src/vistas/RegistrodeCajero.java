@@ -231,10 +231,10 @@ public class RegistrodeCajero extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnEliminar;
+    public javax.swing.JButton BtnEliminar;
     private javax.swing.JTextField TxtCorreo;
-    private javax.swing.JButton btnActualizar;
-    private javax.swing.JButton btnGuardar;
+    public javax.swing.JButton btnActualizar;
+    public javax.swing.JButton btnGuardar;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -243,7 +243,7 @@ public class RegistrodeCajero extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jtbCajero;
+    public javax.swing.JTable jtbCajero;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtPeso;

@@ -3,19 +3,19 @@ package controlador;
 
 public class Cajero {
     
-    String nombre;
-    String colorPiel;
-    int edad;
-    double salario;
-    String tipoSangre;
+    String UUID_Cajero;
+    String Nombre_Cajero;
+    int Edad_Cajero;
+    double Peso_Cajero;
+    String Correo_Cajero;
     
     //Constructor
     public Cajero(String nombreQuePido, int edadQuePido){
-        this.nombre = nombreQuePido;
-        this.edad = edadQuePido;
+        this.Nombre_Cajero = nombreQuePido;
+        this.Edad_Cajero = edadQuePido;
     }
     
-      public Cajero(String color){
-        this.colorPiel = color;
+      public Cajero(String peso){
+        this.Peso_Cajero = Peso_Cajero;
     }
 }
