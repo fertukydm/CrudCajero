@@ -84,8 +84,8 @@ public class CajeroReg {
         //Creamos una variable de la clase de conexion
         Connection conexion = ClaseConexion.getConexion();
         //Definimos el modelo de la tabla
-        DefaultTableModel modeloPinulito = new DefaultTableModel();
-        modeloPinulito.setColumnIdentifiers(new Object[]{"UUID_producto", "Nombre", "Precio", "Categoria"});
+        DefaultTableModel modeloCajeroReg = new DefaultTableModel();
+        modeloCajeroReg.setColumnIdentifiers(new Object[]{"UUID_Cajero", "Nombre_Cajero", "Edad_Cajero", "Peso_Cajero","Correo_Cajero"});
         try {
             //Creamos un Statement
             Statement statement = conexion.createStatement();
@@ -94,13 +94,13 @@ public class CajeroReg {
             //Recorremos el ResultSet
             while (rs.next()) {
                 //Llenamos el modelo por cada vez que recorremos el resultSet
-                modeloPinulito.addRow(new Object[]{rs.getString("UUID_producto"), 
+                modeloCajeroReg.addRow(new Object[]{rs.getString("UUID_producto"), 
                     rs.getString("nombre"), 
                     rs.getInt("precio"), 
                     rs.getString("categoria")});
             }
             //Asignamos el nuevo modelo lleno a la tabla
-            tabla.setModel(modeloPinulito);
+            tabla.setModel(modeloCajeroReg);
         } catch (Exception e) {
             System.out.println("Este es el error en el modelo, metodo mostrar " + e);
         }

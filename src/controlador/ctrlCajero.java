@@ -31,8 +31,9 @@ public class ctrlCajero {
         
       if(e.getSource() == vistas.btnGuardar){
           modelo.setNombre_Cajero(vistas.txtNombre.getText());
-          modelo.setPrecio(Double.parseDouble( vistas.txtPrecio.getText()));
-          modelo.setCategoria(vistas.txtCategoria.getText());
+          modelo.setPeso_Cajero(Double.parseDouble( vistas.txtPeso.getText()));
+          modelo.setEdad_Cajero(vistas.txtEdad.getText());
+          modelo.setCorreo_Cajero(vistas.txt);
           
           modelo.Guardar();
           modelo.Mostrar(vistas.jtbCajero);
